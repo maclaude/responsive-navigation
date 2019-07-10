@@ -1,6 +1,5 @@
 body {
   font-family: 'Poppins', sans-serif;
-  text-align: center;
 }
 
 h1 {
@@ -18,4 +17,54 @@ h2 {
 main {
   width: 60%;
   margin: auto;
+}
+
+.container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background: #F2F3F4;
+  color: #34495E;
+  padding: 1em 0;
+  position: relative;
+  box-shadow: 0 3px 20px rgba(black, 0.2);
+}
+
+header::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.logo {
+  float: left;
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.logo span {
+  font-weight: 400;
+}
+
+.site-nav {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  background: #2E4053;
+}
+
+.site-nav li {
+  border-bottom: 1px solid #808B96;
+}
+
+.site-nav a {
+  display: block;
+  padding: 2em 6em;
+  text-transform: uppercase;
+  color: #FFF;
 }
