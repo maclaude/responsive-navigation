@@ -46,13 +46,76 @@ header::after {
   position: absolute;
   top: 100%;
   right: 0%;
-  background: #2E4053; }
+  background: #2E4053;
+  clip-path: circle(0px at top right);
+  transition: clip-path ease-in-out 700ms; }
+  .site-nav--open {
+    clip-path: circle(150% at top right); }
 
 .site-nav li {
   border-bottom: 1px solid #808B96; }
+
+.site-nav li:last-child {
+  border-bottom: none; }
 
 .site-nav a {
   display: block;
   padding: 2em 6em;
   text-transform: uppercase;
   color: #FFF; }
+  .site-nav a:hover, .site-nav a:focus {
+    background: #808B96; }
+
+.menu-toggle {
+  padding: 1em;
+  position: absolute;
+  top: .4em;
+  right: .4em;
+  cursor: pointer; }
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: #2E4053;
+  height: 3px;
+  width: 1.5em;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms; }
+
+.hamburger::before {
+  transform: translateY(-6px); }
+
+.hamburger::after {
+  transform: translateY(3px); }
+
+/* 
+ * If hamburger is inside of open it will turn 
+ * If not, it will return to normal
+ */
+.open .hamburger {
+  transform: rotate(45deg); }
+  .open .hamburger::before {
+    opacity: 0; }
+  .open .hamburger::after {
+    transform: translateY(-3px) rotate(-90deg); }
+
+@media (min-width: 750px) {
+  .menu-toggle {
+    display: none; }
+  .site-nav {
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: right;
+    clip-path: initial; }
+  .site-nav li {
+    display: inline-block;
+    border: none; }
+  .site-nav a {
+    padding: 0;
+    margin-left: 3em;
+    color: #2E4053; }
+    .site-nav a:hover, .site-nav a:focus {
+      background: transparent; } }
