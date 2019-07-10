@@ -1,0 +1,11 @@
+{
+  "name": "starter-project",
+  "version": "1.0.0",
+  "description": "starter model for new project",
+  "main": "index.js",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}

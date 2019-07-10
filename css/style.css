@@ -1,0 +1,17 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center; }
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 1em; }
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: .8em; }
+
+main {
+  width: 60%;
+  margin: auto; }
